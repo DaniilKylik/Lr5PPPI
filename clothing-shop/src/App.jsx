@@ -29,7 +29,7 @@ function App() {
             setIsLoggedIn(true);
             setUser(JSON.parse(savedUser));
         }
-    }, []);
+    }, []); //test
 
     const handleLoginOpen = () => setIsLoginOpen(true);
     const handleLoginClose = () => setIsLoginOpen(false);
