@@ -11,6 +11,12 @@ pipeline {
                 bat 'npm install'
             }
         }
+        stage('Check Node.js and npm versions') {
+            steps {
+                bat 'node -v'
+                bat 'npm -v'
+            }
+        }
         stage('Run Tests') {
             steps {
                 bat 'npm test -- --watchAll=false'
