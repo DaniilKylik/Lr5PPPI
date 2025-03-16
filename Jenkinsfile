@@ -6,15 +6,15 @@ pipeline {
                 git 'https://github.com/DaniilKylik/Lr5PPPI.git'
             }
         }
-        stage('Install Dependencies') {
-            steps {
-                bat 'npm install'
-            }
-        }
-        stage('Check Node.js and npm versions') {
+        stage('Check Node.js and npm versions') { // Перенесено вище
             steps {
                 bat 'node -v'
                 bat 'npm -v'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                bat 'npm install'
             }
         }
         stage('Run Tests') {
@@ -24,4 +24,3 @@ pipeline {
         }
     }
 }
-
