@@ -10,10 +10,6 @@
     "jest": "^29.7.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "test": "jest"
-=======
-  "test": "react-scripts test"
->>>>>>> b0c6641de82d50b7995d148e6e20bc8e179258d6
   }
 }
