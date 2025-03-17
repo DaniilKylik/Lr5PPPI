@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "jest"
-  }
+  },
   "jest": {
   "reporters": [
     "default",
