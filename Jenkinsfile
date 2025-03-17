@@ -13,6 +13,13 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
+                dir('clothing-shop-backend') {
+                    bat 'npm test'
+                }
+            }
+        }
+        stage('Run Tests') {
+            steps {
                 bat 'npm test -- --watchAll=false'
             }
         }
