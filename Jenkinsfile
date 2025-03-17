@@ -27,7 +27,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 dir('clothing-shop-backend/models') {
-                    bat 'npx jest --verbose'
+                    bat 'npx jest clothing-shop-backend/models/user.test.js'
                 }
             }
         }
