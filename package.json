@@ -14,11 +14,5 @@
   },
   "scripts": {
     "test": "jest"
-  },
-  "jest": {
-  "reporters": [
-    "default",
-    ["jest-junit", { "outputDirectory": "test-coverage", "outputName": "test-results.xml" }]
-  ]
   }
 }
