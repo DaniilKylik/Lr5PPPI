@@ -11,6 +11,11 @@ pipeline {
                 bat 'npm install'
             }
         }
+        stage('Check Funding') {
+            steps {
+                bat 'npm fund'
+            }
+        }
         stage('Run Tests') {
             steps {
                 dir('clothing-shop-backend') {
