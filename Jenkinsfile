@@ -38,7 +38,7 @@ pipeline {
         }
         post {
             always {
-                junit '**/test-coverage/test-results.xml' // Шлях до вашого XML файлу результатів
+                junit 'clothing-shop-backend/test-coverage/test-results.xml' // Шлях до вашого XML файлу результатів
             }
         }
     }
