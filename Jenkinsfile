@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools {
-        nodejs "NodeJS 23.10.0"
-    }
     stages {
         stage('Checkout') {
             steps {
@@ -14,19 +11,6 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Check Node.js and npm versions') {
-            steps {
-                bat 'node -v'
-                bat 'npm -v'
-            }
-        }
-        stage('Run Tests') {
-            steps {
-                dir('clothing-shop-backend') {
-                    bat 'npm test'
-                }
-            }
-        }
         stage('Run Tests') {
             steps {
                 bat 'npm test -- --watchAll=false'
@@ -34,3 +18,4 @@ pipeline {
         }
     }
 }
+
