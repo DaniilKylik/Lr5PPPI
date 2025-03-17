@@ -23,11 +23,5 @@
   },
   "devDependencies": {
     "jest": "^29.7.0"
-  },
-  "jest": {
-  "reporters": [
-    "default",
-    ["jest-junit", { "outputDirectory": "test-coverage", "outputName": "test-results.xml" }]
-  ]
   }
 }
