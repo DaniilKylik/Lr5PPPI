@@ -36,5 +36,10 @@ pipeline {
                 bat 'npm fund'
             }
         }
+        post {
+            always {
+                junit '**/test-coverage/test-results.xml' // Шлях до вашого XML файлу результатів
+            }
+        }
     }
 }
