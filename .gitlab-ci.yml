@@ -1,0 +1,29 @@
+stages:
+  - install
+  - test
+
+variables:
+  NODE_ENV: test
+
+before_script:
+  - cd clothing-shop-backend
+  - cd models
+
+install_dependencies:
+  stage: install
+  image: node:18
+  script:
+    - npm install
+
+run_tests:
+  stage: test
+  image: node:18
+  script:
+    - npm install -g jest
+    - npx jest user.test.js --coverage --testResultsProcessor="jest-junit"
+  artifacts:
+    when: always
+    reports:
+      junit: coverage/junit.xml
+    paths:
+      - coverage/
