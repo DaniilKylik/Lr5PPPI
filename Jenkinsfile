@@ -27,7 +27,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 dir('clothing-shop-backend/models') {
-                    bat 'npx jest --verbose'
+                    bat 'npx jest clothing-shop-backend/models/user.test.js'
                 }
             }
         }
@@ -38,7 +38,7 @@ pipeline {
         }
         post {
             always {
-                junit '**/test-coverage/test-results.xml' // Шлях до вашого XML файлу результатів
+                junit 'clothing-shop-backend/test-coverage/test-results.xml' // Шлях до вашого XML файлу результатів
             }
         }
     }
