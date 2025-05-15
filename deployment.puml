@@ -1,0 +1,8 @@
+@startuml
+node "React Frontend" as front
+node "Node.js Backend" as back
+database "MongoDB/PostgreSQL" as db
+
+front --> back : HTTP API
+back --> db : Queries
+@enduml
